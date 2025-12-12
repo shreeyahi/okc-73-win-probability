@@ -7,23 +7,15 @@ I’m a Warriors fan first, analytics second.
 The 2015–16 Golden State Warriors went **24–1** to start the season.  
 Right now, the Oklahoma City Thunder are also **24–1**.
 
-A couple hours before OKC’s next game, I found myself genuinely thinking:  
-*“Are they actually about to do this?”*
+A couple of hours before OKC’s next game, I found myself genuinely thinking:
+*“Are they actually about to break this record?”*
 
-At the same time, my Twitter feed was full of takes like *“Shai right now is better than prime Curry”* — which, respectfully, felt like pure ragebait. Curry did what he did while going up against **prime LeBron**, changed the way basketball is played, and led a team that defined an era. The league context matters, and people tend to forget that.
+At the same time, my Twitter feed was full of takes like *“Shai right now is better than prime Curry.”*  
+That kind of comparison ignores context. Curry’s peak came while facing **prime LeBron**, reshaping the league’s style of play, and sustaining dominance across an entire season. The league has changed, and records don’t exist in a vacuum.
 
-So instead of arguing online, I decided to actually **model it** and see what the numbers say.
+So instead of arguing online, I decided to test the claim properly — using data and probability instead of hot takes.
 
-I’m also fully biased. I’ll admit that upfront.
-
----
-
-## About me
-
-I’m a very motivated and determined high school student who sets goals and goes out of my way to reach them.  
-I’m interested in machine learning, especially applied to sports, and I hope to one day work as an ML engineer (ideally with the NBA).
-
-This project is part of my GitHub portfolio, but honestly, I also did it for myself — so I wouldn’t wake up anxious checking OKC’s record every morning.
+I’m fully biased toward the Warriors. This project doesn’t try to hide that — it tries to account for it.
 
 ---
 
@@ -31,27 +23,28 @@ This project is part of my GitHub portfolio, but honestly, I also did it for mys
 
 This project estimates the probability that the **Oklahoma City Thunder reach at least 73 wins** in an 82-game NBA season.
 
-Instead of using a naive “current win percentage” approach (which gives absurd answers like 99%), I built a model that:
+A naive approach — projecting the current win percentage forward — suggests near-certainty.  
+That felt wrong.
 
-- Uses **team strength (Net Rating)**
-- Is **calibrated on the 2015–16 Warriors (73–9)**
+Instead, I built a model that:
+
+- Uses **team strength (Net Rating / SRS)** rather than raw wins
+- Is **calibrated on the 2015–16 Warriors (73–9)** so the scale is historically grounded
 - Accounts for **home vs away performance**
-- Includes **regression to the mean**
+- Explicitly includes **regression to the mean**
 - Includes **uncertainty** in how strong OKC actually is after a small sample size
 
-I used Python and simulations to test different assumptions and see how sensitive the result really is.
-
-I did use AI as a **learning tool** while building this — not to copy-paste code, but to guide me, explain concepts, and help debug. I’m new to this space, I don’t want to spend money on courses, and AI has honestly been the best teacher so far without the pressure of strict timelines on top of school.
+The goal isn’t to predict a single outcome, but to understand **how likely** breaking 73–9 really is once realism is added back into the model.
 
 ---
 
 ## The core idea (no fluff)
 
 1. Build a **logistic win-probability model**
-2. **Calibrate it using the 2015–16 Warriors**
+2. **Calibrate it using the 2015–16 Warriors**, forcing the model to reproduce ~73 wins
 3. Apply the *same model* to OKC
-4. Add **shrinkage** so early-season dominance doesn’t get treated as absolute truth
-5. Simulate the rest of the season thousands of times
+4. Shrink early-season dominance so it isn’t treated as absolute truth
+5. Run Monte Carlo simulations to estimate probabilities, not certainties
 
 Same math. Same assumptions. Different teams.
 
@@ -70,52 +63,52 @@ I tested three scenarios based on how much OKC might regress and how uncertain t
 ### How to read this
 
 - **Baseline (~24%)**: Breaking 73–9 is possible, but unlikely without sustained, historic dominance.
-- **Optimistic (~40%)**: If OKC’s early net rating is close to their true strength and regression is minimal.
-- **Pessimistic (~7%)**: If OKC regresses toward a “normal elite team.”
+- **Optimistic (~40%)**: If OKC’s early net rating reflects real, long-term strength with minimal regression.
+- **Pessimistic (~7%)**: If OKC regresses toward a more typical elite team.
 
-This explains *why* the 73–9 record is still special.
+This range is the point.  
+Once uncertainty and regression are included, records stop looking inevitable.
 
 ---
 
-## Why the Warriors were different (biased but honest)
+## Why the Warriors were different (biased, but deliberate)
 
-I’m 100% biased, but context matters.
+I won’t pretend to be neutral here — context matters.
 
-- The Warriors did this while going up against **prime LeBron**
-- They reshaped spacing, shooting, and pace across the league
-- Their dominance wasn’t just numbers — it forced the NBA to adapt
+- The 2016 Warriors sustained dominance while facing **prime LeBron**
+- Their style of play permanently changed spacing, shooting, and pace across the league
+- Their success wasn’t just statistical — it forced the NBA to adapt
 
-OKC is a great team.  
-But if they ran into that 2016 Warriors squad in a playoff series?  
-I’m taking **GSW in 4**.
+OKC is an excellent team.  
+But if this Thunder squad ran into the 2016 Warriors in a playoff series, I’m taking **Golden State in 4** without hesitation.
 
 ---
 
 ## Limitations
 
-This project is still a work in progress:
+This project is still evolving:
 
-- Uses **average remaining SOS** instead of game-by-game schedule
+- Remaining schedule strength is modeled using **average SOS**, not game-by-game opponents
 - Net Rating is based on a **small sample size**
-- No injury or roster-change modeling
-- Assumes independence between games
+- No injury, fatigue, or roster-change modeling
+- Games are treated as independent events
 
-I’m still in high school and learning — this isn’t meant to be a final answer. The project doesn’t end here.
+These limitations are intentional — this project is exploratory, not final.
 
 ---
 
 ## What’s next
 
-- Game-by-game schedule simulation using opponent SRS  
-- Injury / availability adjustments  
-- More sports + ML projects (this is just one of many)
+- Full game-by-game schedule simulation using opponent SRS
+- Injury and availability adjustments
+- Additional sports + ML projects building on this framework
 
-I’m mainly exploring, learning, and building.
+I built this both as a portfolio project and for myself — to replace anxiety and hot takes with actual reasoning.
 
 ---
 
 ## Final takeaway
 
-After accounting for regression and uncertainty, OKC’s probability of reaching 73 wins is **closer to ~20–25% than 99%** under realistic assumptions.
+Once regression and uncertainty are included, OKC’s probability of reaching 73 wins is **closer to ~20–25% than 99%** under realistic assumptions.
 
 Which is exactly why the 2015–16 Warriors season still deserves respect.
