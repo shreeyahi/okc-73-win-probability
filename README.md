@@ -4,18 +4,18 @@
 
 I’m a Warriors fan first, analytics second.
 
-The 2015–16 Golden State Warriors went **24–1** to start the season.  
-Right now, the Oklahoma City Thunder are also **24–1**.
+The 2015–16 Golden State Warriors went **24–1** to start the season, they lost on their 25th game.  
+Right now, the Oklahoma City Thunder are also **24–1**. But they lost on their 9th game of this season (2025-26).
 
-A couple of hours before OKC’s next game, I found myself genuinely thinking:
+A day before OKC’s next game (26th), I found myself genuinely thinking:
 *“Are they actually about to break this record?”*
 
 At the same time, my Twitter feed was full of takes like *“Shai right now is better than prime Curry.”*  
-That kind of comparison ignores context. Curry’s peak came while facing **prime LeBron**, reshaping the league’s style of play, and sustaining dominance across an entire season. The league has changed, and records don’t exist in a vacuum.
+That kind of comparison ignores context. Curry’s peak came while facing **prime LeBron James**, arguably the best NBA player of all time. He reshaped the league’s style of play. Since then, the league has changed, and records don’t exist in a vacuum.
 
-So instead of arguing online, I decided to test the claim properly — using data and probability instead of hot takes.
+So instead of arguing online, I decided to test the claim properly, using data and probability instead of hot takes.
 
-I’m fully biased toward the Warriors. This project doesn’t try to hide that — it tries to account for it.
+I’m fully biased toward the Warriors. This project doesn’t try to hide that. It tries to account for it.
 
 ---
 
