@@ -75,7 +75,7 @@ Once uncertainty and regression are included, records stop looking inevitable.
 
 I won’t pretend to be neutral here — context matters.
 
-- The 2016 Warriors sustained dominance while facing **prime LeBron**
+- The 2016 Warriors sustained dominance while facing **prime LeBron** and **Kyrie Irving**
 - Their style of play permanently changed spacing, shooting, and pace across the league
 - Their success wasn’t just statistical — it forced the NBA to adapt
 
