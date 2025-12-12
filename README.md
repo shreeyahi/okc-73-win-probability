@@ -109,6 +109,4 @@ I built this both as a portfolio project and for myself — to replace anxiety a
 
 ## Final takeaway
 
-Once regression and uncertainty are included, OKC’s probability of reaching 73 wins is **closer to ~20–25% than 99%** under realistic assumptions.
-
-Which is exactly why the 2015–16 Warriors season still deserves respect.
+Using my baseline model (calibrated on the 2015–16 Warriors and including regression + uncertainty), OKC has about an **18% chance to finish with 74+ wins** (break 73–9), and the predicted final record is roughly **67–15** on average.
